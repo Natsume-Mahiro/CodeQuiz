@@ -1,0 +1,2 @@
+C:\Users\mahir\source\repos\CodeQuiz\x64\Debug\CodeQuiz.exe
+C:\Users\mahir\source\CPP\CodeQuiz\x64\Debug\CodeQuiz.exe
