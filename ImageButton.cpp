@@ -1,6 +1,12 @@
 #include "ImageButton.h"
 
-ImageButton::ImageButton() : imageHandle(-1), posX(0), posY(0), width(0), height(0) {}
+ImageButton::ImageButton()
+    : imageHandle(-1)
+    , posX(0)
+    , posY(0)
+    , width(0)
+    , height(0)
+{}
 
 ImageButton::~ImageButton()
 {
