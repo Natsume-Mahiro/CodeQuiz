@@ -1,6 +1,8 @@
 #include "Game.h"
 
-Game::Game() {}
+Game::Game()
+    : currentScene(Scene::TITLE)
+{}
 
 Game::~Game() {}
 
@@ -12,10 +14,17 @@ void Game::initialize()
 
 void Game::update()
 {
-    if (button1.isClicked())
+    switch (currentScene)
     {
-        DxLib_End();
-    }
+    case Scene::TITLE:
+        if (button1.isClicked())
+        {
+            currentScene = Scene::LANGUAGE_SELECT;
+        }
+        button1.draw();
+        break;
 
-    button1.draw();
+    case Scene::LANGUAGE_SELECT:
+        break;
+    }
 }

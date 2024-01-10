@@ -12,5 +12,12 @@ public:
     void update();
 
 private:
+    enum class Scene
+    {
+        TITLE,
+        LANGUAGE_SELECT
+    };
+    Scene currentScene;
+
     ImageButton button1;
 };
