@@ -9,7 +9,7 @@ Game::~Game() {}
 void Game::initialize()
 {
     SetMouseDispFlag(TRUE); // マウスカーソルを表示
-	button1.load("Images/CodeQuiz_Title.jpg", 0, 0);
+	button1.load("Images/Title_BackGround.jpg", 0, 0);
 }
 
 void Game::update()
@@ -25,7 +25,7 @@ void Game::update()
         break;
 
     case Scene::STAGE_SELECT:
-        LoadGraphScreen(0, 0, "Images/CodeQuiz_StageSelect.jpg", FALSE);
+        LoadGraphScreen(0, 0, "Images/StageSelect_BackGround.jpg", FALSE);
         break;
     }
 }
