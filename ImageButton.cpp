@@ -45,7 +45,7 @@ bool ImageButton::isClicked() const
         GetMouseInput() & MOUSE_INPUT_LEFT) != 0;
 }
 
-void ImageButton::setDisabled(bool disabled)
+void ImageButton::setDisabled(bool a)
 {
-    disabled = disabled;
+    disabled = a;
 }
