@@ -32,7 +32,7 @@ void ImageButton::draw()
 
 bool ImageButton::isClicked() const
 {
-    if (!disabled)
+    if (disabled)
     {
         return false;  // disabled‚ªtrue‚Ìê‡‚Íƒ{ƒ^ƒ“‚ª”½‰‚µ‚È‚¢
     }

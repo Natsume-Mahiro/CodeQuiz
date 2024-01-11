@@ -15,7 +15,7 @@ private:
     enum class Scene
     {
         TITLE,
-        LANGUAGE_SELECT
+        STAGE_SELECT
     };
     Scene currentScene;
 

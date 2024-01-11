@@ -19,13 +19,13 @@ void Game::update()
     case Scene::TITLE:
         if (button1.isClicked())
         {
-            currentScene = Scene::LANGUAGE_SELECT;
+            currentScene = Scene::STAGE_SELECT;
         }
         button1.draw();
-        //LoadGraphScreen(0, 0, "Images/ImageA.jpg",TRUE);
         break;
 
-    case Scene::LANGUAGE_SELECT:
+    case Scene::STAGE_SELECT:
+        LoadGraphScreen(0, 0, "Images/CodeQuiz_StageSelect.jpg", FALSE);
         break;
     }
 }
