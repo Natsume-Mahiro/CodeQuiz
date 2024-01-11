@@ -6,7 +6,8 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _
     // 画面サイズ等の初期設定
     const int ScreenWidth = 1920;
     const int ScreenHeight = 1080;
-    SetMainWindowText("コードクイズ"); // ウィンドウの名前
+    SetMainWindowText("CodeQuiz"); // ウィンドウの名前
+    SetMainWindowClassName("CodeQuiz"); // ウィンドウクラスの名前
     ChangeWindowMode(FALSE); // ウィンドウモードで起動
     SetGraphMode(ScreenWidth, ScreenHeight, 32); // 画面の解像度指定
     SetWindowSizeChangeEnableFlag(FALSE); // 画面サイズ変更不可
