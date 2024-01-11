@@ -6,6 +6,7 @@ ImageButton::ImageButton()
     , posY(0)
     , width(0)
     , height(0)
+    , disabled(false)
 {}
 
 ImageButton::~ImageButton()
@@ -31,10 +32,20 @@ void ImageButton::draw()
 
 bool ImageButton::isClicked() const
 {
+    if (!disabled)
+    {
+        return false;  // disabled‚ªtrue‚Ìê‡‚Íƒ{ƒ^ƒ“‚ª”½‰ž‚µ‚È‚¢
+    }
+
     int mouseX, mouseY;
     GetMousePoint(&mouseX, &mouseY);
 
     return (mouseX >= posX && mouseX <= posX + width &&
         mouseY >= posY && mouseY <= posY + height &&
         GetMouseInput() & MOUSE_INPUT_LEFT) != 0;
+}
+
+void ImageButton::setDisabled(bool disabled)
+{
+    disabled = disabled;
 }

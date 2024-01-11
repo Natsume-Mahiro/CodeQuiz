@@ -22,6 +22,7 @@ void Game::update()
             currentScene = Scene::LANGUAGE_SELECT;
         }
         button1.draw();
+        //LoadGraphScreen(0, 0, "Images/ImageA.jpg",TRUE);
         break;
 
     case Scene::LANGUAGE_SELECT:
