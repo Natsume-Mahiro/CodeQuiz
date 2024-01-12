@@ -1,5 +1,6 @@
 #pragma once
 
+#include "SceneManager.h"
 #include "ImageButton.h"
 
 class Game
@@ -12,12 +13,6 @@ public:
     void update();
 
 private:
-    enum class Scene
-    {
-        TITLE,
-        STAGE_SELECT
-    };
-    Scene currentScene;
-
+    SceneManager sceneManager;
     ImageButton button1;
 };

@@ -1,7 +1,6 @@
 #include "Game.h"
 
 Game::Game()
-    : currentScene(Scene::TITLE)
 {}
 
 Game::~Game() {}
@@ -14,17 +13,17 @@ void Game::initialize()
 
 void Game::update()
 {
-    switch (currentScene)
+    switch (sceneManager.getCurrentScene())
     {
-    case Scene::TITLE:
+    case SceneManager::Scene::TITLE:
         if (button1.isClicked())
         {
-            currentScene = Scene::STAGE_SELECT;
+            sceneManager.switchScene(SceneManager::Scene::STAGE_SELECT);
         }
         button1.draw();
         break;
 
-    case Scene::STAGE_SELECT:
+    case SceneManager::Scene::STAGE_SELECT:
         LoadGraphScreen(0, 0, "Images/StageSelect_BackGround.jpg", FALSE);
         break;
     }
