@@ -17,4 +17,6 @@ public:
 
 protected:
     SceneManager* sceneManager;
+
+    void switchScene(SceneManager::Scene newScene) { sceneManager->switchScene(newScene); }
 };
