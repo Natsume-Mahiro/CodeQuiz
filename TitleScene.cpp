@@ -1,26 +1,28 @@
 #include "TitleScene.h"
 
 TitleScene::TitleScene()
-{
-    titleButton.load("Title_BackGround.jpg", 100, 100); // タイトルボタンの画像をロード
-}
+    : sceneManager(nullptr)
+{}
 
 TitleScene::~TitleScene() {}
 
-void TitleScene::initialize()
+void TitleScene::initialize(SceneManager& manager)
 {
+    sceneManager = &manager;
+    titleButton.load("Images/Title_BackGround.jpg", 0, 0);
 }
 
 void TitleScene::update()
 {
+    draw();
+
     if (titleButton.isClicked())
     {
-        // タイトルボタンがクリックされたら、何らかの処理を行う（ここでは移行せずに終了する例としています）
-        DxLib_End();
+        sceneManager->switchScene(SceneManager::Scene::STAGE_SELECT);
     }
 }
 
 void TitleScene::draw()
 {
-    titleButton.draw(); // タイトルボタンの描画
+    titleButton.draw();
 }

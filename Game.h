@@ -1,7 +1,9 @@
 #pragma once
 
+#include "DxLib.h"
+
 #include "SceneManager.h"
-#include "ImageButton.h"
+#include "TitleScene.h"
 
 class Game
 {
@@ -14,5 +16,5 @@ public:
 
 private:
     SceneManager sceneManager;
-    ImageButton button1;
+    TitleScene title;
 };

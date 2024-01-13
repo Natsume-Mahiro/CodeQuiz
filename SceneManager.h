@@ -8,6 +8,7 @@ public:
 
     enum class Scene
     {
+        TITLE_LOAD,
         TITLE,
         STAGE_SELECT
     };

@@ -1,7 +1,7 @@
 #include "SceneManager.h"
 
 SceneManager::SceneManager()
-    : currentScene(Scene::TITLE)
+    : currentScene(Scene::TITLE_LOAD)
 {}
 
 SceneManager::~SceneManager() {}
