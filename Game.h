@@ -2,7 +2,7 @@
 
 #include "DxLib.h"
 
-#include "SceneManager.h"
+#include "BaseScene.h"
 #include "TitleScene.h"
 
 class Game
@@ -15,6 +15,7 @@ public:
     void update();
 
 private:
+    BaseScene* currentScene;
     SceneManager sceneManager;
-    TitleScene title;
+    TitleScene titleScene;
 };

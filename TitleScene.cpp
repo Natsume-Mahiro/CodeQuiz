@@ -1,14 +1,11 @@
 #include "TitleScene.h"
 
-TitleScene::TitleScene()
-    : sceneManager(nullptr)
-{}
+TitleScene::TitleScene() {}
 
 TitleScene::~TitleScene() {}
 
-void TitleScene::initialize(SceneManager& manager)
+void TitleScene::initialize()
 {
-    sceneManager = &manager;
     titleButton.load("Images/Title_BackGround.jpg", 0, 0);
 }
 

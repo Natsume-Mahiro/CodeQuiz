@@ -1,12 +1,22 @@
 #include "Game.h"
 
-Game::Game() {}
+Game::Game()
+    : currentScene(nullptr)
+{}
 
 Game::~Game() {}
 
 void Game::initialize()
 {
-    SetMouseDispFlag(TRUE); // マウスカーソルを表示
+    // マウスカーソルを表示
+    SetMouseDispFlag(TRUE);
+
+    // 各シーンにSceneManagerを設定
+    titleScene.setSceneManager(sceneManager);
+
+    // 最初のシーンを設定
+    currentScene = &titleScene;
+    currentScene->initialize();
 }
 
 void Game::update()
@@ -14,12 +24,12 @@ void Game::update()
     switch (sceneManager.getCurrentScene())
     {
     case SceneManager::Scene::TITLE_LOAD:
-        title.initialize(sceneManager);
+        currentScene->initialize();
         sceneManager.switchScene(SceneManager::Scene::TITLE);
         break;
 
     case SceneManager::Scene::TITLE:
-        title.update();
+        currentScene->update();
         break;
 
     case SceneManager::Scene::STAGE_SELECT:
