@@ -1,7 +1,5 @@
 #pragma once
 
-#include "DxLib.h"
-
 #include "BaseScene.h"
 #include "TitleScene.h"
 

@@ -33,7 +33,6 @@ void Game::update()
         break;
 
     case SceneManager::Scene::STAGE_SELECT:
-        LoadGraphScreen(0, 0, "Images/StageSelect_BackGround.jpg", FALSE);
         break;
     }
 }

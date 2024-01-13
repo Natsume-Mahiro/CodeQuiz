@@ -1,6 +1,7 @@
 #pragma once
 
 #include "SceneManager.h"
+#include "ImageButton.h"
 
 class BaseScene
 {
