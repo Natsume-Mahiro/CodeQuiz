@@ -33,6 +33,7 @@ void Game::update()
         break;
 
     case SceneManager::Scene::STAGE_SELECT:
+
         break;
     }
 }

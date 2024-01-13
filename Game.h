@@ -2,6 +2,7 @@
 
 #include "BaseScene.h"
 #include "TitleScene.h"
+#include "StageSelectScene.h"
 
 class Game
 {
@@ -16,4 +17,5 @@ private:
     BaseScene* currentScene;
     SceneManager sceneManager;
     TitleScene titleScene;
+    StageSelectScene stageSlectScene;
 };
