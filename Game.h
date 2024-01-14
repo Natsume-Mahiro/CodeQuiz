@@ -1,9 +1,6 @@
 #pragma once
 
-#include "BaseScene.h"
 #include "SceneManager.h"
-#include "TitleScene.h"
-#include "StageSelectScene.h"
 
 class Game
 {
@@ -16,6 +13,4 @@ public:
 
 private:
     SceneManager sceneManager;
-    TitleScene titleScene;
-    StageSelectScene stageSelectScene;
 };

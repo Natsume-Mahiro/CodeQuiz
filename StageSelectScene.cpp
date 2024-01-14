@@ -1,6 +1,8 @@
 #include "StageSelectScene.h"
 
-StageSelectScene::StageSelectScene() {}
+StageSelectScene::StageSelectScene()
+	: sceneManager(nullptr)
+{}
 
 StageSelectScene::~StageSelectScene() {}
 
