@@ -1,6 +1,7 @@
 #pragma once
 
 #include "BaseScene.h"
+#include "SceneManager.h"
 
 class StageSelectScene : public BaseScene
 {
@@ -8,7 +9,10 @@ public:
     StageSelectScene();
     ~StageSelectScene();
 
-    void initialize() override;
+    void initialize(SceneManager* manager) override;
     void update() override;
     void draw() override;
+
+private:
+    SceneManager* sceneManager;
 };

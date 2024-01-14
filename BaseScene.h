@@ -1,22 +1,16 @@
 #pragma once
 
-#include "SceneManager.h"
 #include "ImageButton.h"
+
+class SceneManager;
 
 class BaseScene
 {
 public:
-    BaseScene() : sceneManager(nullptr) {}
+    BaseScene() {}
     virtual ~BaseScene() {}
 
-    void setSceneManager(SceneManager& manager) { sceneManager = &manager; }
-
-    virtual void initialize() = 0;
+    virtual void initialize(SceneManager* manager) = 0;
     virtual void update() = 0;
     virtual void draw() = 0;
-
-protected:
-    SceneManager* sceneManager;
-
-    void switchScene(SceneManager::Scene newScene) { sceneManager->switchScene(newScene); }
 };

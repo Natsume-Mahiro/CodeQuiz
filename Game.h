@@ -1,6 +1,7 @@
 #pragma once
 
 #include "BaseScene.h"
+#include "SceneManager.h"
 #include "TitleScene.h"
 #include "StageSelectScene.h"
 
@@ -14,8 +15,7 @@ public:
     void update();
 
 private:
-    BaseScene* currentScene;
     SceneManager sceneManager;
     TitleScene titleScene;
-    StageSelectScene stageSlectScene;
+    StageSelectScene stageSelectScene;
 };

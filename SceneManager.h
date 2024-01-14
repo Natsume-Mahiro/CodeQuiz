@@ -1,20 +1,25 @@
 #pragma once
 
+#include "BaseScene.h"
+
+enum class Scene
+{
+    TITLE,
+    STAGE_SELECT
+};
+
 class SceneManager
 {
 public:
     SceneManager();
     ~SceneManager();
 
-    enum class Scene
-    {
-        TITLE_LOAD,
-        TITLE,
-        STAGE_SELECT
-    };
-    Scene getCurrentScene() const { return currentScene; }
-    void switchScene(Scene scene);
+    void switchScene(Scene newScene);
+
+    void update();
+    void draw();
 
 private:
-    Scene currentScene;
+    BaseScene* currentScene;
+    Scene currentSceneType;
 };

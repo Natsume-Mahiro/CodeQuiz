@@ -4,15 +4,16 @@ StageSelectScene::StageSelectScene() {}
 
 StageSelectScene::~StageSelectScene() {}
 
-void StageSelectScene::initialize()
+void StageSelectScene::initialize(SceneManager* manager)
 {
+	sceneManager = manager;
 }
 
 void StageSelectScene::update()
 {
-	LoadGraphScreen(0, 0, "Images/StageSelect_BackGround.jpg", FALSE);
 }
 
 void StageSelectScene::draw()
 {
+	LoadGraphScreen(0, 0, "Images/StageSelect_BackGround.jpg", FALSE);
 }
