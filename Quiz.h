@@ -12,7 +12,6 @@ public:
 
 private:
     std::string language;
-    std::string question;
     ImageButton choice1;
     ImageButton choice2;
     ImageButton choice3;
