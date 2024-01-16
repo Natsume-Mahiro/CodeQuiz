@@ -143,6 +143,7 @@
     <ClCompile Include="ImageButton.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Quiz.cpp" />
     <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="StageSelectScene.cpp" />
     <ClCompile Include="TitleScene.cpp" />
@@ -152,6 +153,7 @@
     <ClInclude Include="GameScene.h" />
     <ClInclude Include="ImageButton.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="Quiz.h" />
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="StageSelectScene.h" />
     <ClInclude Include="TitleScene.h" />
