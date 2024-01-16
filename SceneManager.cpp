@@ -1,6 +1,7 @@
 #include "SceneManager.h"
 #include "TitleScene.h"
 #include "StageSelectScene.h"
+#include "GameScene.h"
 
 SceneManager::SceneManager()
     : currentScene(nullptr)
@@ -25,6 +26,9 @@ void SceneManager::switchScene(Scene newScene)
         break;
     case Scene::STAGE_SELECT:
         currentScene = new StageSelectScene();
+        break;
+    case Scene::GAME:
+        currentScene = new GameScene();
         break;
     }
 

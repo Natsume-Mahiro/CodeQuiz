@@ -14,6 +14,10 @@ void StageSelectScene::initialize(SceneManager* manager)
 
 void StageSelectScene::update()
 {
+	if (gameStart.isClicked())
+	{
+		sceneManager->switchScene(Scene::GAME);
+	}
 }
 
 void StageSelectScene::draw()
