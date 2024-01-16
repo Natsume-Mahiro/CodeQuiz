@@ -18,6 +18,7 @@ void GameScene::initialize(SceneManager* manager)
 
 void GameScene::update()
 {
+    quiz.update();
 }
 
 void GameScene::draw()

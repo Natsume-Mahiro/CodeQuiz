@@ -12,6 +12,7 @@ public:
     void load(const std::string& language, const std::string& quiz, const std::string& choice1,
         const std::string& choice2, const std::string& choice3, const std::string& choice4);
 
+    void update();
     void draw();
 
 private:

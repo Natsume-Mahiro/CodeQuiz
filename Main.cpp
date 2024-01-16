@@ -4,11 +4,11 @@
 int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _In_ LPSTR lpCmdLine, _In_ int nShowCmd)
 {
     // 画面サイズ等の初期設定
-    const int ScreenWidth = 500;
-    const int ScreenHeight = 500;
+    const int ScreenWidth = 1920;
+    const int ScreenHeight = 1080;
     SetMainWindowText("CodeQuiz"); // ウィンドウの名前
     SetMainWindowClassName("CodeQuiz"); // ウィンドウクラスの名前
-    ChangeWindowMode(TRUE); // ウィンドウモードで起動
+    ChangeWindowMode(FALSE); // ウィンドウモードで起動
     SetGraphMode(ScreenWidth, ScreenHeight, 32); // 画面の解像度指定
     SetWindowSizeChangeEnableFlag(FALSE); // 画面サイズ変更不可
     SetAlwaysRunFlag(TRUE); // 非アクティブでも実行する
