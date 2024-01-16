@@ -4,10 +4,6 @@ Quiz::Quiz(const std::string& language, const std::string& quiz, const std::stri
     const std::string& choice2, const std::string& choice3, const std::string& choice4)
     : language(language)
     , quiz(quiz)
-    , choice1()
-    , choice2()
-    , choice3()
-    , choice4()
 {
     this->choice1.load(choice1.c_str(), 0, 0);
     this->choice2.load(choice2.c_str(), 0, 0);
