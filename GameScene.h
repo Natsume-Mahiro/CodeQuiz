@@ -1,6 +1,7 @@
 #pragma once
 
 #include "BaseScene.h"
+#include "SceneManager.h"
 #include "Quiz.h"
 
 class GameScene : public BaseScene

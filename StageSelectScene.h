@@ -15,6 +15,5 @@ public:
 
 private:
     SceneManager* sceneManager;
-
     ImageButton gameStart;
 };
