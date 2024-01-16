@@ -1,10 +1,5 @@
 ﻿  Game.cpp
-  GameScene.cpp
   ImageButton.cpp
-  Main.cpp
-  Quiz.cpp
-  SceneManager.cpp
-  StageSelectScene.cpp
-  TitleScene.cpp
+  Mouse.cpp
   コードを生成中...
   CodeQuiz.vcxproj -> C:\Users\mahir\source\CPP\CodeQuiz\x64\Debug\CodeQuiz.exe

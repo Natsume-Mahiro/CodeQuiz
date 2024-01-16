@@ -1,4 +1,5 @@
 #include "ImageButton.h"
+#include "Mouse.h"
 
 ImageButton::ImageButton()
     : imageHandle(-1)
@@ -42,7 +43,7 @@ bool ImageButton::isClicked() const
 
     return (mouseX >= posX && mouseX <= posX + width &&
         mouseY >= posY && mouseY <= posY + height &&
-        GetMouseInput() & MOUSE_INPUT_LEFT) != 0;
+        Mouse::getInstance().isPressed());
 }
 
 void ImageButton::setDisabled(bool a)
