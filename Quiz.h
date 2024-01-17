@@ -15,6 +15,7 @@ public:
 
     void update();
     void draw();
+    void setDisabled(bool disabled);
 
     int getState() const { return state; }
 

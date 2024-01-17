@@ -3,6 +3,7 @@
 #include "BaseScene.h"
 #include "SceneManager.h"
 #include "Quiz.h"
+#include "FlashImage.h"
 
 class GameScene : public BaseScene
 {
@@ -17,4 +18,6 @@ public:
 private:
     SceneManager* sceneManager;
     Quiz quiz;
+    FlashImage maru;
+    FlashImage batsu;
 };

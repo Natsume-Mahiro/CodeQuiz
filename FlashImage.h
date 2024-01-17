@@ -1,19 +1,24 @@
 #pragma once
 
 #include "DxLib.h"
-#include <thread>
-#include <chrono>
 #include <string>
 
 class FlashImage
 {
 public:
-    FlashImage(const char* imagePath);
+    FlashImage();
     ~FlashImage();
 
-    void display();
+    void load(const char* imagePath, int x, int y);
+    void draw();
+
+    bool getState() const { return State; }
 
 private:
     int imageHandle;
-    std::string imagePath;
+    int posX;
+    int posY;
+    int Count;
+
+    bool State;
 };

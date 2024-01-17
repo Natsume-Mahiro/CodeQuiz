@@ -57,3 +57,11 @@ void Quiz::draw()
     choice3.draw();
     choice4.draw();
 }
+
+void Quiz::setDisabled(bool a)
+{
+    choice1.setDisabled(a);
+    choice2.setDisabled(a);
+    choice3.setDisabled(a);
+    choice4.setDisabled(a);
+}

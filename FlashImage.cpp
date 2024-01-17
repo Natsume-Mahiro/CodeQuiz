@@ -1,7 +1,11 @@
 #include "FlashImage.h"
 
-FlashImage::FlashImage(const char* imagePath)
-    : imageHandle(-1), imagePath(imagePath)
+FlashImage::FlashImage()
+    : imageHandle(-1)
+    , posX(0)
+    , posY(0)
+    , Count(0)
+    , State(false)
 {}
 
 FlashImage::~FlashImage()
@@ -12,17 +16,23 @@ FlashImage::~FlashImage()
     }
 }
 
-void FlashImage::display()
+void FlashImage::load(const char* imagePath, int x, int y)
 {
-    // ‰æ‘œ‚Ì“Ç‚İ‚İ
-    imageHandle = LoadGraph(imagePath.c_str());
+    imageHandle = LoadGraph(imagePath);
+    posX = x;
+    posY = y;
+}
 
-    // ‰æ‘œ‚Ì•\¦
-    DrawGraph(0, 0, imageHandle, TRUE);
-
-    // ˆê•b‘Ò‚Â
-    std::this_thread::sleep_for(std::chrono::seconds(1));
-
-    // ‰æ–Ê‚ğƒNƒŠƒA
-    ClearDrawScreen();
+void FlashImage::draw()
+{
+    Count++;
+    if (Count < 60)
+    {
+        DrawGraph(posX, posY, imageHandle, TRUE);
+    }
+    else
+    {
+        State = true;
+        Count = 0;
+    }
 }

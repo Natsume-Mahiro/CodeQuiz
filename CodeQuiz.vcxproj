@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="FlashImage.cpp" />
     <ClCompile Include="GameScene.cpp" />
     <ClCompile Include="ImageButton.cpp" />
     <ClCompile Include="Game.cpp" />
@@ -151,6 +152,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BaseScene.h" />
+    <ClInclude Include="FlashImage.h" />
     <ClInclude Include="GameScene.h" />
     <ClInclude Include="ImageButton.h" />
     <ClInclude Include="Game.h" />
