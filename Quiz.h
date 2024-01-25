@@ -6,12 +6,10 @@
 class Quiz
 {
 public:
-    Quiz();
-    ~Quiz();
-
-    void load(const std::string& language, const std::string& quiz, const std::string& choice1,
+    Quiz(const std::string& language, const std::string& quiz, const std::string& choice1,
         const std::string& choice2, const std::string& choice3, const std::string& choice4,
         const int correct);
+    ~Quiz();
 
     void update();
     void draw();

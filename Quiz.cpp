@@ -1,31 +1,23 @@
 #include "Quiz.h"
 
-Quiz::Quiz()
-    : language()
-    , quiz()
-    , correct(0)
+Quiz::Quiz(const std::string& language, const std::string& quiz, const std::string& choice_1,
+    const std::string& choice_2, const std::string& choice_3, const std::string& choice_4,
+    const int correct)
+    : language(language)
+    , quiz(quiz)
+    , correct(correct)
     , state(0)
+    , choice1(choice_1.c_str(), 165, 610)
+    , choice2(choice_2.c_str(), 1005, 610)
+    , choice3(choice_3.c_str(), 165, 840)
+    , choice4(choice_4.c_str(), 1005, 840)
     , choices{ &choice1, &choice2, &choice3, &choice4 }
-{}
+{
+    if (correct > 4) this->correct = 4;
+}
 
 Quiz::~Quiz()
 {
-}
-
-void Quiz::load(const std::string& language, const std::string& quiz, const std::string& choice1,
-    const std::string& choice2, const std::string& choice3, const std::string& choice4,
-    const int correct)
-{
-    this->language = language;
-    this->quiz = quiz;
-    this->correct = correct;
-
-    if (this->correct > 4) this->correct = 4;
-
-    this->choice1.load(choice1.c_str(), 165, 610);
-    this->choice2.load(choice2.c_str(), 1005, 610);
-    this->choice3.load(choice3.c_str(), 165, 840);
-    this->choice4.load(choice4.c_str(), 1005, 840);
 }
 
 void Quiz::update()
