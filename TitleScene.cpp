@@ -2,6 +2,7 @@
 
 TitleScene::TitleScene()
     : sceneManager(nullptr)
+    , titleButton("Images/Title_BackGround.jpg", 0, 0)
 {}
 
 TitleScene::~TitleScene() {}
@@ -9,7 +10,6 @@ TitleScene::~TitleScene() {}
 void TitleScene::initialize(SceneManager* manager)
 {
     sceneManager = manager;
-    titleButton.load("Images/Title_BackGround.jpg", 0, 0);
 }
 
 void TitleScene::update()

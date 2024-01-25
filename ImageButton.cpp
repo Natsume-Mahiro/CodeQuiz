@@ -1,41 +1,43 @@
 #include "ImageButton.h"
 #include "Mouse.h"
 
-ImageButton::ImageButton()
-    : imageHandle(-1)
-    , posX(0)
-    , posY(0)
+ImageButton::ImageButton(const char* imagePath, int x, int y)
+    : posX(x)
+    , posY(y)
     , width(0)
     , height(0)
     , disabled(false)
-{}
-
-ImageButton::~ImageButton()
+    , imageHandle(-1)
 {
-    if (imageHandle != -1)
+    imageHandle = LoadGraph(imagePath);
+    if (imageHandle == -1)
     {
-        DeleteGraph(imageHandle);
+        // エラーハンドリング
+    }
+    else
+    {
+        GetGraphSize(imageHandle, &width, &height);
     }
 }
 
-void ImageButton::load(const char* imagePath, int x, int y)
+ImageButton::~ImageButton()
 {
-    imageHandle = LoadGraph(imagePath);
-    posX = x;
-    posY = y;
-    GetGraphSize(imageHandle, &width, &height);
+    releaseImage();
 }
 
-void ImageButton::draw()
+void ImageButton::draw() const
 {
-    DrawGraph(posX, posY, imageHandle, TRUE);
+    if (imageHandle != -1)
+    {
+        DrawGraph(posX, posY, imageHandle, TRUE);
+    }
 }
 
 bool ImageButton::isClicked() const
 {
-    if (disabled)
+    if (disabled || imageHandle == -1)
     {
-        return false;  // disabledがtrueの場合はボタンが反応しない
+        return false;
     }
 
     int mouseX, mouseY;
@@ -49,4 +51,13 @@ bool ImageButton::isClicked() const
 void ImageButton::setDisabled(bool a)
 {
     disabled = a;
+}
+
+void ImageButton::releaseImage()
+{
+    if (imageHandle != -1)
+    {
+        DeleteGraph(imageHandle);
+        imageHandle = -1;
+    }
 }

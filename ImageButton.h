@@ -5,11 +5,10 @@
 class ImageButton
 {
 public:
-    ImageButton();
+    ImageButton(const char* imagePath, int x = 0, int y = 0);
     ~ImageButton();
 
-    void load(const char* imagePath, int x, int y);
-    void draw();
+    void draw() const;
     bool isClicked() const;
     void setDisabled(bool disabled);
 
@@ -20,4 +19,6 @@ private:
     int width;
     int height;
     bool disabled;
+
+    void releaseImage();
 };

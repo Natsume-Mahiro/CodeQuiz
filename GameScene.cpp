@@ -2,6 +2,8 @@
 
 GameScene::GameScene()
     : sceneManager(nullptr)
+    , quiz("C++", "Images/CPPquiz1.jpg", "Images/CPPquiz1_1.jpg", "Images/CPPquiz1_2.jpg",
+        "Images/CPPquiz1_3.jpg", "Images/CPPquiz1_4.jpg", 2)
 {}
 
 GameScene::~GameScene()
@@ -10,8 +12,6 @@ GameScene::~GameScene()
 void GameScene::initialize(SceneManager* manager)
 {
     sceneManager = manager;
-    quiz.load("C++", "Images/CPPquiz1.jpg", "Images/CPPquiz1_1.jpg",
-        "Images/CPPquiz1_2.jpg", "Images/CPPquiz1_3.jpg", "Images/CPPquiz1_4.jpg", 2);
     maru.load("Images/maru.png", 710, 290);
     batsu.load("Images/batsu.png", 710, 290);
 }
